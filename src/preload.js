@@ -4,5 +4,5 @@
 const { contextBridge } = require("electron");
 
 contextBridge.exposeInMainWorld("os", {
-  username: require("fs").userInfo().username,
+  username: require("os").userInfo().username,
 });
